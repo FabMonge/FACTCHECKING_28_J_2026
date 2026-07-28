@@ -9,18 +9,22 @@ const CONFIG = {
     iconos: {
         "VERDADERO": `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
         "FALSO": `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.59 13.59L15.17 17 12 13.83 8.83 17 7.41 15.59 10.59 12 7.41 8.41 8.83 7 12 10.17 15.17 7l1.41 1.41L13.41 12l3.18 3.59z"/></svg>`,
-        "ENGAÑOSO": `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>`
+        "ENGAÑOSO": `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>`,
+        "IMPRECISO": `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>`
+
     },
     colores: {
         calificaciones: {
             "VERDADERO": "badge-verdadero",
             "FALSO": "badge-falso",
-            "ENGAÑOSO": "badge-enganoso"
+            "ENGAÑOSO": "badge-enganoso",
+            "IMPRECISO": "badge-enganoso"
         },
         bordeTarjeta: {
             "VERDADERO": "#4caf50", 
             "FALSO": "#e53935",     
-            "ENGAÑOSO": "#ffb300"   
+            "ENGAÑOSO": "#ffb300",
+            "IMPRECISO": "#ffb300"
         }
     }
 };
