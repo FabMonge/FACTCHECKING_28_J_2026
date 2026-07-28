@@ -157,7 +157,7 @@ body, html {
 }
 
 .candidate-photo {
-    width: 100%; /* Mantiene el tamaño imponente */
+    width: 75%; /* Mantiene el tamaño imponente */
     max-width: none;
     height: auto;
     display: block;
