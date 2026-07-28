@@ -149,7 +149,7 @@ body, html {
 .sticky-candidate-wrapper {
     position: -webkit-sticky;
     position: sticky;
-    top: 30vh; /* Mantiene la misma altura y "timing" de aparición que en el debate */
+    top: 10vh; /* Mantiene la misma altura y "timing" de aparición que en el debate */
     width: 100%;
     display: flex;
     flex-direction: column;
