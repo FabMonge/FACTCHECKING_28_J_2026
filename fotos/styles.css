@@ -1,0 +1,472 @@
+/* =========================================
+   1. RESET Y BASE (TODO BLANCO)
+   ========================================= */
+body, html {
+    margin: 0; 
+    padding: 0; 
+    background-color: #ffffff; 
+    font-family: 'Arial', sans-serif; 
+}
+
+/* =========================================
+   2. IMAGEN SUPERIOR (FULL WIDTH)
+   ========================================= */
+.top-hero-image {
+    width: 100%; 
+    height: auto;
+    max-height: 70vh; 
+    object-fit: cover; 
+    display: block;
+    object-position: 20% 60%;
+}
+
+/* =========================================
+   3. HEADER ESTÁNDAR DE ECDATA
+   ========================================= */
+.special-header {
+    max-width: 800px; 
+    margin: 50px auto 40px auto; 
+    padding: 0 20px; 
+    text-align: center;
+}
+
+.kicker { 
+    margin-bottom: 25px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.kicker img { 
+    height: 35px; 
+    width: auto; 
+    display: block; 
+    max-width: 100%; 
+}
+
+.headline {
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    font-size: 70px; 
+    font-weight: 900; 
+    color: #111;
+    line-height: 1.05; 
+    margin-top: 0; 
+    margin-bottom: 25px;
+    letter-spacing: -1.5px; 
+}
+
+.intro-text { 
+    font-size: 18px; 
+    color: #444; 
+    line-height: 1.6; 
+    margin-bottom: 25px; 
+}
+
+.header-divider { 
+    width: 50px; 
+    height: 1px; 
+    background-color: #333; 
+    margin: 30px auto 15px auto; 
+}
+
+.date-published { 
+    font-size: 14px; 
+    color: #444; 
+    letter-spacing: normal; 
+    margin-bottom: 15px; 
+}
+
+.social-share-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 12px; 
+    margin-top: 15px; 
+}
+
+.social-btn {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 38px; 
+    height: 38px; 
+    border: 1px solid #333;
+    border-radius: 4px; 
+    color: #333; 
+    text-decoration: none;
+    background-color: transparent; 
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover { 
+    background-color: #333; 
+    color: #ffffff; 
+    transform: translateY(-2px); 
+}
+
+/* =========================================
+   4. LAYOUT: ZONA INTERACTIVA Y CANDIDATOS
+   ========================================= */
+.story-text { 
+    max-width: 750px; 
+    margin: 0 auto 60px auto; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.story-text p { 
+    font-family: 'Arial', sans-serif; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+.interactive-zone {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 40px; 
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px; 
+}
+
+.side-col {
+    flex: 0 0 380px; 
+}
+
+.center-col {
+    flex: 1;
+    max-width: 750px;
+    min-width: 0; 
+}
+
+/* Envoltura que arrastra foto al hacer scroll */
+/* =========================================
+   MECÁNICA STICKY EXACTA DEL PROYECTO ANTERIOR
+   ========================================= */
+.sticky-candidate-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh; /* Mantiene la misma altura y "timing" de aparición que en el debate */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candidate-photo {
+    width: 75%; /* Mantiene el tamaño imponente */
+    max-width: 65vh;
+    height: auto;
+    display: block;
+    pointer-events: none; /* Evita que la foto bloquee clics en el centro */
+}
+
+.foto-izq {
+    position: relative;
+    /* Usa un porcentaje positivo para empujarla a la derecha, o negativo para la izquierda */
+    transform: translateX(-15%); 
+}
+
+/* Control INDEPENDIENTE para la foto de la DERECHA */
+.foto-der {
+    position: relative;
+    /* Si estaba bien como estaba antes del centrado forzado, la dejamos en 0. 
+       Puedes ajustarla después si necesitas moverla un poco */
+    transform: translateX(15%); 
+}
+
+/* LAS CLASES DE LOS BOTONES FUERON ELIMINADAS AQUÍ */
+
+/* =========================================
+   5. TARJETAS DE FACT-CHECKING
+   ========================================= */
+
+/* =========================================
+   5. TARJETAS DE FACT-CHECKING
+   ========================================= */
+.fact-feed { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 35px; 
+    margin-bottom: 40px; 
+}
+
+.fact-card {
+    border: 1px solid #e0e0e0; 
+    border-radius: 6px; 
+    padding: 30px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border-top: 5px solid #ccc; 
+}
+
+.fact-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #f0f0f0; 
+    padding-bottom: 15px;
+}
+
+.fact-author-wrapper {
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+}
+
+.fact-author-img {
+    width: 55px; 
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover; 
+    object-position: top center; 
+    border: 2px solid #eaeaea;
+    background-color: #f9f9f9;
+}
+
+.fact-author-text {
+    display: flex; 
+    flex-direction: column;
+}
+
+.fact-author-name { 
+    font-weight: 900; 
+    font-size: 16px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    line-height: 1.2; 
+    margin-bottom: 3px;
+    color: #111111; 
+}
+
+.author-keiko { color: #f57c00; } 
+.author-sanchez { color: #2e7d32; } 
+
+.fact-author-desc {
+    font-size: 13px; 
+    color: #666; 
+    margin: 0;
+}
+
+.fact-badge {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px;
+    padding: 6px 14px; 
+    border-radius: 4px; 
+    font-size: 12px; 
+    font-weight: 900;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    margin-top: 5px;
+}
+
+.badge-verdadero { background-color: #4caf50; color: #fff; }
+.badge-falso { background-color: #e53935; color: #fff; }
+.badge-enganoso { background-color: #ffb300; color: #111; } 
+
+.fact-quote {
+    font-family: 'Georgia', serif; 
+    font-size: 22px; 
+    font-style: italic; 
+    font-weight: bold;
+    color: #111; 
+    line-height: 1.5; 
+    margin: 0 0 20px 0; 
+    position: relative;
+}
+
+.fact-quote::before { 
+    content: "“"; 
+    color: #ffb300; 
+    font-size: 38px; 
+    line-height: 0; 
+    vertical-align: bottom; 
+    margin-right: 4px; 
+}
+
+.fact-quote::after { 
+    content: "”"; 
+    color: #ffb300; 
+    font-size: 38px; 
+    line-height: 0; 
+    vertical-align: bottom; 
+    margin-left: 4px; 
+}
+
+.fact-explanation { 
+    font-size: 16px; 
+    color: #444; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+
+.fact-explanation strong { 
+    color: #111; 
+}
+
+.fact-source {
+    font-size: 13px; 
+    color: #888; 
+    margin: 15px 0 0 0;
+    padding-top: 15px; 
+    border-top: 1px dashed #eee;
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.4;
+}
+
+.fact-source strong {
+    color: #555; 
+    text-transform: uppercase; 
+    font-size: 11px;
+    letter-spacing: 0.5px; 
+    margin-right: 4px;
+}
+
+/* =========================================
+   6. LEYENDA EXPLICATIVA
+   ========================================= */
+.leyenda-seccion {
+    border-top: 1px solid #eee; 
+    padding-top: 30px; 
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.leyenda-titulo {
+    font-family: 'Arial', sans-serif; 
+    font-size: 13px; 
+    font-weight: 900;
+    color: #111; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin: 0 0 25px 0;
+}
+
+.leyenda-grid {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+.leyenda-item {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.leyenda-icono { 
+    margin-bottom: 8px; 
+}
+
+.leyenda-item strong { 
+    font-size: 12px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    margin-bottom: 6px; 
+}
+
+.leyenda-item p { 
+    font-size: 12px; 
+    color: #666; 
+    line-height: 1.4; 
+    margin: 0; 
+}
+
+.color-verdadero { color: #4caf50; }
+.color-falso { color: #e53935; }
+.color-enganoso { color: #ffb300; }
+
+/* =========================================
+   7. FOOTER DE CRÉDITOS (FULL WIDTH)
+   ========================================= */
+.special-credits-black { 
+    background-color: #111111; 
+    color: #ffffff; 
+    padding: 70px 20px; 
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+    position: relative; 
+    z-index: 20; 
+}
+
+.credits-logo-container { margin-top: 40px; }
+.credits-logo-container img { 
+    height: 40px; 
+    width: auto; 
+    display: block; 
+    margin: 0 auto; 
+    filter: brightness(0) invert(1); 
+}
+
+.copyright-text { 
+    font-family: 'Arial', sans-serif; 
+    font-size: 11px; 
+    color: #777777; 
+    margin-top: 15px; 
+    letter-spacing: 0.5px; 
+}
+
+.credits-main-title { 
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    font-size: 22px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-top: 0; 
+    margin-bottom: 40px; 
+    color: #ffffff; 
+}
+
+.credit-block { 
+    margin-bottom: 25px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.credit-role { 
+    font-family: 'Arial', sans-serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: #aaaaaa; 
+    margin-bottom: 5px; 
+    letter-spacing: 1.5px; 
+}
+
+.credit-name { 
+    font-family: 'Georgia', serif; 
+    font-size: 18px; 
+    color: #ffffff; 
+}
+
+/* =========================================
+   8. MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+@media (max-width: 1300px) {
+    .side-col { flex: 0 0 280px; }
+    .interactive-zone { gap: 20px; }
+}
+
+@media (max-width: 1024px) {
+    .side-col { display: none; } 
+    .headline { font-size: 50px; letter-spacing: -0.5px; }
+}
+
+@media (max-width: 768px) {
+    .headline { font-size: 40px; }
+    .fact-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .fact-quote { font-size: 20px; }
+    .leyenda-grid { flex-direction: column; gap: 25px; }
+    .leyenda-item p { max-width: 250px; margin: 0 auto; }
+}
