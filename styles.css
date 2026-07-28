@@ -167,7 +167,7 @@ body, html {
 .foto-izq {
     position: relative;
     /* Usa un porcentaje positivo para empujarla a la derecha, o negativo para la izquierda */
-    transform: translateX(20%); 
+    transform: translateX(-15%); 
 }
 
 /* Control INDEPENDIENTE para la foto de la DERECHA */
@@ -175,7 +175,7 @@ body, html {
     position: relative;
     /* Si estaba bien como estaba antes del centrado forzado, la dejamos en 0. 
        Puedes ajustarla después si necesitas moverla un poco */
-    transform: translateX(0%); 
+    transform: translateX(15%); 
 }
 
 /* LAS CLASES DE LOS BOTONES FUERON ELIMINADAS AQUÍ */
